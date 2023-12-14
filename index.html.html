@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive Navbar</title>
+
+</head>
+
+<body class="bg-gray-100">
+
+
+
+    <nav
+        class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 sticky top-0 w-full z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="home.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"> -->
+                <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Ease Lab</span>
+            </a>
+
+            
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a href="login.html"
+                    class="text-white bg-[#93C5FD] hover:bg-[#0376D9] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg  px-4 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Login</a>
+                <a href="register.html" style="margin-left: 8%;"
+                    class="text-white  bg-[#93C5FD] hover:bg-[#0376D9] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Signup</a>
+                <a href="dashboard.html" style="margin-left: 8%;"
+                    class="text-white  bg-[#93C5FD] hover:bg-[#0376D9] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    Dashboard</a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+
+
+                <!-- <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                    class="text-white bg-white  focus:outline-none focus:ring-blue-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    type="button"> 
+                    <i class="fa-solid fa-user text-5xl "></i> </button> -->
+
+                    <span id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="pl-5 "><i class="fa-solid fa-user text-4xl p-2"></i></span>
+                <!-- Dropdown menu -->
+                <div id="dropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                            <a href="dashboard.html"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                out</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </nav>
+
+
+
+    <!-- slider -->
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-[60vh]">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="landscape_banner/Personalized Care.png" class="absolute block w-full h-full " alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="landscape_banner/Health Care.png" class="absolute block w-full h-full" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="landscape_banner/Medical Care.png" class="absolute block w-full h-full" alt="...">
+            </div>
+
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="landscape_banner\2.png" class="absolute block w-full h-full" alt="...">
+            </div>
+
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="landscape_banner/Pharmaceutical Medicine.png" class="absolute block w-full h-full" alt="...">
+            </div>
+
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full " aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="3"></button>
+
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <!-- flowbite card -->
+    <div class="container mx-auto mt-8 p-2  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        style="width: 95%; padding-top: 0%;">
+        <div class="main-div grid grid-cols-1 md:grid-cols-2 gap-6 w-4/5 mx-auto mt-8">
+            <div class="text-black text-lg mt-12">
+                <h2 class="text-xl font-semibold mb-2">Ease Lab</h2>
+
+                <span class="mt-8 text-center font-serif">Medical laboratory science (MLS) is the health profession that
+                    provides
+                    diagnostic services needed to detect and treat disease. Diagnostic services include critical
+                    chemical, hematological, immunologic, microscopic, and bacteriological analyses on blood, tissues,
+                    and bodily fluids that aid in a patient’s overall diagnosis.</span>
+            </div>
+            <div class="mx-auto  rounded-lg mb-6" style="margin-left: 10%;">
+                <img class="rounded-lg max-w-full  h-auto"
+                    src="https://dg1xqmhtoint1.cloudfront.net/img/ihs/blog/mlt-17.webp?mtime=20220616191108&focal=none"
+                    alt="Image" style="width: 90%; margin-top: 1rem;margin-left:2%; ">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- card-1 -->
+    <div class="md:mt-[5%] mt-[10%] inset-0 bg-gray-100 flex items-center justify-center  ">
+        <div class="flex ">
+
+            <div class="w-64 md:w-96 lg:w-[70vh] h-[50vh] md:h-[70vh] bg-cover bg-center shadow-lg rounded-lg -my-5"
+                style="background-image: url('card-img/lab1.jpg');">
+            </div>
+
+            <div
+                class="bg-white p-8 w-64 md:w-96 lg:w-[70vh] h-auto md:h-[70vh] hover:bg-blue-100 shadow-lg rounded-lg overflow-hidden -ml-10 z-0">
+                <h2 class="text-xl font-semibold">Ease Lab</h2>
+                <span class="text-gray-600">This is the Lab</span>
+                <p class="mt-4 text-black text-base md:text-lg font-serif">Lorem ipsum dolor, sit amet consectetur
+                    adipisicing
+                    elit. Autem,
+                    delectus
+                    impedit aspernatur fuga, eligendi in ex fugiat quae dignissimos saepe ea esse laborum aut ipsam
+                    temporibus consequuntur labore ullam deserunt?</p>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <div class="gallery container mx-auto">
+        <h1 class="text-[#1E3932] text-center text-3xl font-bold my-12 ">Gallery</h1>
+        <div class="image-area grid grid-cols-2 md:grid-cols-4 gap-6 ml-8 mr-8">
+            <div class="h-64"><img class="w-full h-full"
+                    src="https://dg1xqmhtoint1.cloudfront.net/img/ihs/blog/mlt-17.webp?mtime=20220616191108&focal=none"
+                    alt=""></div>
+            <div class="h-64"><img class="w-full h-full" src="card-img\lab5.jpg" alt=""></div>
+            <div class="h-64"><img class="w-full h-full" src="card-img/lab1.jpg" alt=""></div>
+            <div class="h-64"><img class="w-full h-full" src="card-img/lab6.jpeg" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="wave-area text-center mt-4">
+        <svg class="w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
+            <path fill="#435EBE" fill-opacity="1"
+                d="M0,0L40,10.7C80,21,160,43,240,74.7C320,107,400,149,480,149.3C560,149,640,107,720,96C800,85,880,107,960,101.3C1040,96,1120,64,1200,48C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+            </path>
+        </svg>
+        <div class="w-full bg-[#435EBE] space-y-6">
+            <div class=" container content-area w-2/3 mx-auto   overflow-hidden p-8 rounded-xl">
+                <h3 class="text-base font-bold uppercase text-white">The importance of research</h3>
+                <h1 class="text-3xl font-medium text-white mb-4">The <span class="text-[#B1E1DA]">next frontier</span>
+                    of precision medicine</h1>
+
+                <p class="text-base font-normal text-white">The human microbiome’s potential to improve health and fight
+                    disease
+                    worldwide is enormous. There are 10x the number of microbial cells in the human gut than in the
+                    whole
+                    human body, totaling roughly 100 trillion microbes, representing as many as 5,000 different species.
+                    And
+                    just like our genes, our gut microbiome is essential for human development, immunity, and nutrition
+                </p>
+
+            </div>
+        </div>
+    </div> -->
+
+
+    <section class="container mx-auto services mt-12 mx-4 mb-24">
+        <div class="bg-blue-300 bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px]
+            px-6 xl:px-0 relative h-[368px] flex flex item-center xl:items-start -z-10">
+            <div class="container mx-auto">
+                <div class=" flex item-center flex-col xl:flex-row xl:mb-[60px]">
+                    <h2
+                        class="text-white font-serif md:text-5xl text-3xl ml-12 mt-8 xl:mt-0 font-semibold flex-1 mb-4 xl:mb-0 text-center xl:text-left">
+                        Our
+                        Best Services for your solution</h2>
+
+                    <p class=" md:mr-2 font-serif md:ml-[10%] md:mt-2 md:mr-[4%] text-2xl text-white flex-1 text-center  xl:text-left max-w-3xl xl:max-w-none text-center
+                          ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolor nemo, officia
+                        sapiente, esse alias
+                        ducimus nobis sint hic voluptas ipsam vitae minus maiores, veritatis culpa porro. Vel, hic
+                        ex.</p>
+
+                </div>
+            </div>
+        </div>
+        <div
+            class="container mx-auto xl:ml-[80px]  md:mr-4 mt-8 xl:-mt-[90px] md:-mt-[60px] xl:w-[90%] md:w-[80%] md:ml-[70px] ml-4 -mr-4">
+            <div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
+                <div
+                    class="bg-white p-[30px] rounded-[10px] hover:bg-purple-100 shadow-custom2 m-h-[288px] flex flex-col item-center text-center">
+                    <div class="mb-[15px] mx-auto ">
+                        <img class="w-[140px] h-[120px]  item-center" src="svg/svg5.png" alt="">
+                    </div>
+                    <h3 class="text-lg mb-[10px]">General Partitions</h3>
+                    <p class="font-light leading-normal font-serif">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Cupiditate, placeat.</p>
+                </div>
+
+                <div
+                    class="bg-white p-[30px] rounded-[10px]  shadow-custom2 m-h-[288px] flex flex-col item-center text-center">
+                    <div class="mb-[15px] mx-auto">
+                        <img class="w-[140px] h-[120px]  item-center" src="svg/svg1.jpeg" alt="">
+                    </div>
+                    <h3 class="text-lg mb-[10px]">General Partitions</h3>
+                    <p class="font-light leading-normal font-serif">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Cupiditate, placeat.</p>
+                </div>
+
+                <div
+                    class="bg-white p-[30px] rounded-[10px] shadow-custom2 m-h-[288px] flex flex-col item-center text-center">
+                    <div class="mb-[15px] mx-auto">
+                        <img class="w-[140px] h-[120px]  item-center" src="svg/svg2.png" alt="">
+                    </div>
+                    <h3 class="text-lg mb-[10px]">General Partitions</h3>
+                    <p class="font-light leading-normal font-serif">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Cupiditate, placeat.</p>
+                </div>
+
+                <div
+                    class="bg-white p-[30px] rounded-[10px] shadow-custom2 m-h-[288px] flex flex-col item-center text-center">
+                    <div class="mb-[15px] mx-auto">
+                        <img class="w-[140px] h-[120px]  item-center" src="svg/svg3.png" alt="">
+                    </div>
+                    <h3 class="text-lg mb-[10px]">General Partitions</h3>
+                    <p class="font-light leading-normal font-serif">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Cupiditate, placeat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="p-4 mt-[0.8%] bg-gray-600 md:p-8 lg:p-10 dark:bg-gray-800">
+        <div class="mx-auto max-w-screen-xl text-center">
+            <a href="/" class="flex justify-center items-center text-2xl font-semibold text-white dark:text-white">
+                Ease Lab
+            </a>
+            <!-- <p class="my-6 text-white dark:text-gray-400">Open-source library of over 400+ web components and interactive elements built for better web.</p> -->
+            <ul class="flex mt-8 flex-wrap justify-center items-center mb-6 text-white dark:text-white">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Premium</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Campaigns</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+                </li>
+            </ul>
+            <span class="text-sm text-white sm:text-center dark:text-gray-400">© 2021-2023 <a href="#"
+                    class="hover:underline">Ease Lab™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
