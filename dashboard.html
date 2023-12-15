@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
 <body>
     <div class="sidebar flex h-full md:grid grid-cols-5">
         
-        <aside id="sidebar" class="h-screen hidden md:block  bg-white rounded-lg  col-span-1 space-y-6">
+        <aside id="sidebar" class="h-screen hidden md:block fixed  md:static bg-white rounded-lg  col-span-1 space-y-6">
             <div class="logo-heading p-4 pb-0 ">
                 <h1 class="text-[#435EBE] text-3xl font-semibold">EaseLab</h1>
             </div>
@@ -97,11 +97,11 @@ body::-webkit-scrollbar-thumb {
             </div>
         </aside>
         
-        <div class="right-area p-4 col-span-4 bg-[#F2F7FF]">
+        <div class="right-area container overflow-x-auto mx-auto p-4 col-span-4 bg-[#F2F7FF]">
             <i class="fa-solid fa-bars text-3xl block md:hidden" id="toggleSideBar"></i>
             <div class="p-0">
                 <div class="main  bg-white rounded-lg p-0">
-                    <div class="container mx-auto bg-blue-50 p-0">
+                    <div class="container mx-auto bg-[#F2F7FF] p-0">
                         <div class="header">
                             <h1 class="text-[#435EBE] text-3xl font-semibold">
                                 Dashboard Statistics
@@ -112,11 +112,11 @@ body::-webkit-scrollbar-thumb {
                                 <div class="col-span-4 space-y-6">
                                     <div class="first-row grid grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-6 ">
                                         <!-- card1 -->
-                                        <div class="card1 bg-white p-6 rounded-lg shadow-lg flex space-x-4">
+                                        <div class="card1 bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4">
                                             <div class="svg ">
-                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-[#B8B7FE] rounded-lg "></i>
+                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-[#BC7AF9] rounded-lg "></i>
                                             </div>
-                                            <div class="text-area space-y-2 ">
+                                            <div class="text-area space-y-1 ">
                                                 <h1 class="text-[#435EBE] text-md font-semibold">
                                                     Card 1
                                                 </h1>
@@ -126,12 +126,12 @@ body::-webkit-scrollbar-thumb {
                                             </div>
                                         </div>
                                         <!-- card2 -->
-                                        <div class="card1 bg-white p-6 rounded-lg shadow-lg flex space-x-4">
+                                        <div class="card1 bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4">
                                             <div class="svg ">
-                                                <i class="fa-solid fa-money-bill text-white text-3xl p-2 bg-[#B8B7FE] rounded-lg "></i>
+                                                <i class="fa-solid fa-money-bill text-white text-3xl p-2 bg-[#6499E9] rounded-lg "></i>
                                             </div>
-                                            <div class="text-area space-y-2 ">
-                                                <h1 class="text-[#435EBE] text-md font-semibold">
+                                            <div class="text-area space-y-1 ">
+                                                <h1 class="text-[#435EBE] text-md  font-semibold">
                                                     Total Fund
                                                 </h1>
                                                 <p class="font-bold text-md">
@@ -140,9 +140,9 @@ body::-webkit-scrollbar-thumb {
                                             </div>
                                         </div>
                                         <!-- card3 -->
-                                        <div class="card1 bg-white p-6 rounded-lg shadow-lg flex space-x-4">
+                                        <div class="card1 bg-white p-4 items-center rounded-lg shadow-lg flex space-x-4">
                                             <div class="svg ">
-                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-[#B8B7FE] rounded-lg "></i>
+                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-green-400 rounded-lg "></i>
                                             </div>
                                             <div class="text-area space-y-2 ">
                                                 <h1 class="text-[#435EBE] text-md font-semibold">
@@ -154,9 +154,9 @@ body::-webkit-scrollbar-thumb {
                                             </div>
                                         </div>
                                         <!-- card4 -->
-                                        <div class="card1 bg-white p-6 rounded-lg shadow-lg flex space-x-4">
+                                        <div class="card1 bg-white p-4 items-center rounded-lg shadow-lg flex space-x-4">
                                             <div class="svg ">
-                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-[#B8B7FE] rounded-lg "></i>
+                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-[#FF8080] rounded-lg "></i>
                                             </div>
                                             <div class="text-area space-y-2 ">
                                                 <h1 class="text-[#435EBE] text-md font-semibold">
@@ -169,7 +169,7 @@ body::-webkit-scrollbar-thumb {
                                         </div>
                                     </div>
                                     <div class="second-row">
-                                        <div class="card1 bg-white p-6 rounded-lg shadow-lg">
+                                        <div class="card1 bg-white p-2 items-center rounded-lg shadow-lg">
                                             <div class="chart-area p-6">
                                                 <h1 class="text-[#435EBE] text-2xl font-semibold">Chart 1</h1>
                                                 <canvas id="salesChart" width="400" height="200"></canvas>
@@ -261,11 +261,12 @@ body::-webkit-scrollbar-thumb {
                                 </div>
                 
                                 <!-- 2nd column -->
-                                <div class="col-span-4 md:col-span-4 lg:col-span-2 space-y-6">
+                                <div class="w-full col-span-4 md:col-span-4 lg:col-span-2 space-y-6">
                                     <div class="row-1">
-                                        <div class=" col-span-2 card1  bg-white p-6 rounded-lg shadow-lg flex space-x-4">
-                                            <div class="svg ">
-                                                <i class="fa-solid fa-eye text-white text-3xl p-2 bg-[#B8B7FE] rounded-lg "></i>
+                                        <div class=" col-span-2 card1  bg-white p-6 rounded-lg shadow-lg flex space-x-4 md:space-x-2 " >
+                                            <div class="svg  w-1/4 ">
+                                                <img src="https://technext.github.io/mazer/assets/images/faces/1.jpg" alt="" class="w-full  rounded-full">
+                                                <!-- <i class="fa-solid fa-user text-white text-3xl p-2 bg-red-600 rounded-lg "></i> -->
                                             </div>
                                             <div class="text-area space-y-2 ">
                                                 <h1 class="text-[#435EBE] text-md font-semibold">
@@ -289,7 +290,7 @@ body::-webkit-scrollbar-thumb {
                                                     <div class="card1 flex space-x-4">
                                                         <div class="svg ">
                                                             <i
-                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#435EBE] rounded-lg "></i>
+                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#6499E9] rounded-lg "></i>
                                                         </div>
                                                         <div class="text-area space-y-2 ">
                                                             <h1 class="text-[#435EBE] text-xl font-semibold">
@@ -304,7 +305,7 @@ body::-webkit-scrollbar-thumb {
                                                     <div class="card1 flex space-x-4">
                                                         <div class="svg ">
                                                             <i
-                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#435EBE] rounded-lg "></i>
+                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#6499E9] rounded-lg "></i>
                                                         </div>
                                                         <div class="text-area space-y-2 ">
                                                             <h1 class="text-[#435EBE] text-xl font-semibold">
@@ -319,7 +320,7 @@ body::-webkit-scrollbar-thumb {
                                                     <div class="card1 flex space-x-4">
                                                         <div class="svg ">
                                                             <i
-                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#435EBE] rounded-lg "></i>
+                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#6499E9] rounded-lg "></i>
                                                         </div>
                                                         <div class="text-area space-y-2 ">
                                                             <h1 class="text-[#435EBE] text-xl font-semibold">
@@ -334,7 +335,7 @@ body::-webkit-scrollbar-thumb {
                                                     <div class="card1 flex space-x-4">
                                                         <div class="svg ">
                                                             <i
-                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#435EBE] rounded-lg "></i>
+                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#6499E9] rounded-lg "></i>
                                                         </div>
                                                         <div class="text-area space-y-2 ">
                                                             <h1 class="text-[#435EBE] text-xl font-semibold">
@@ -349,7 +350,7 @@ body::-webkit-scrollbar-thumb {
                                                     <div class="card1 flex space-x-4">
                                                         <div class="svg ">
                                                             <i
-                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#435EBE] rounded-lg "></i>
+                                                                class="fa-regular fa-comment-dots text-white text-3xl p-2 bg-[#6499E9] rounded-lg "></i>
                                                         </div>
                                                         <div class="text-area space-y-2 ">
                                                             <h1 class="text-[#435EBE] text-xl font-semibold">
